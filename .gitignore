@@ -1,0 +1,18 @@
+# symfony2 directories
+app/cache/*
+app/logs/*
+bin/
+web/bundles/
+vendor/
+
+# symfony2 files
+app/bootstrap.php.cache
+autoload.php
+phpunit.xml
+composer.lock
+composer.phar
+
+# etc.
+.DS_Store
+.tags
+Thumbs.db
