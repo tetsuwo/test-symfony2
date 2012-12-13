@@ -5,9 +5,12 @@ php:
   - 5.3
   - 5.4
 
-before_script: composer install
+before_script: 
+  - php composer.phar install
+  - php app/console cache:clear --no-warmup
 
-script: phpunit -c app
+script: 
+  - phpunit -c app
 
 notifications:
   email:
