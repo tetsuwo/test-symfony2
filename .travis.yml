@@ -8,3 +8,9 @@ php:
 before_script: composer install
 
 script: phpunit -c app
+
+notifications:
+  email:
+    recipients: tetsuwo.oishi+travis-ci@gmail.com
+    on_success: always # [always|never|change]
+    on_failure: always # [always|never|change]
