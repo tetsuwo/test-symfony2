@@ -10,7 +10,7 @@ before_script:
   - php app/console cache:clear --no-warmup
 
 script: 
-  - phpunit -c app
+  - phpunit -c app/
 
 notifications:
   email:
