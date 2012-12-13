@@ -6,8 +6,8 @@ php:
   - 5.4
 
 before_script: 
-  - php composer.phar install
-  - php app/console cache:clear --no-warmup
+  - composer.phar install
+  - app/console cache:clear --no-warmup
 
 script: 
   - phpunit -c app/
