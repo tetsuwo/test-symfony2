@@ -7,7 +7,7 @@ php:
 
 before_script: 
   - composer install
-  - app/console cache:clear --no-warmup
+  - php app/console cache:clear --no-warmup
 
 script: 
   - phpunit -c app/
