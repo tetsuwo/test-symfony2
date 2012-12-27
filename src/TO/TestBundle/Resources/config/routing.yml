@@ -7,6 +7,6 @@ misc_get_routing_name:
     defaults: { _controller: TOTestBundle:Misc:get_routing_name }
 
 misc_return_plain_text:
-    pattern:  /misc/misc_return_plain_text
-    defaults: { _controller: TOTestBundle:Misc:misc_return_plain_text }
+    pattern:  /misc/return_plain_text
+    defaults: { _controller: TOTestBundle:Misc:return_plain_text }
 
