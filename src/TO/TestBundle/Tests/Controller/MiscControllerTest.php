@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class DefaultControllerTest extends WebTestCase
 {
-    public function testIndex()
+    public function testFabienが表示される()
     {
         $client  = static::createClient();
         $crawler = $client->request('GET', '/to/hello/Fabien');
