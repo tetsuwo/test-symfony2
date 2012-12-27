@@ -6,17 +6,21 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class MiscControllerTest extends WebTestCase
 {
-    public function testGet_routing_name()
+    public function testルーティング名が取得できている()
     {
         $client  = static::createClient();
         $crawler = $client->request('GET', '/to/misc/get_routing_name');
 
         $this->assertTrue(
-            $crawler->filter('html:contains("misc_get_routing_name")')
-                    ->count() === 2);
+            $crawler->filter('#controller')
+                    ->text() === 'misc_get_routing_name');
+
+        $this->assertTrue(
+            $crawler->filter('#twig')
+                    ->text() === 'misc_get_routing_name');
     }
 
-    public function testReturn_plain_text()
+    public function testプレーンテキストを返している()
     {
         $client  = static::createClient();
         $crawler = $client->request('GET', '/to/misc/return_plain_text');
@@ -27,6 +31,6 @@ class MiscControllerTest extends WebTestCase
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
-        $this->assertEquals('plain-text', $client->getResponse()->getContent());
+        $this->assertEquals('PLAIN-TEXT', $client->getResponse()->getContent());
     }
 }
