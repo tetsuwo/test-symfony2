@@ -1,6 +1,6 @@
 to_test:
     resource: "@TOTestBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /to
 
 # Internal routing configuration to handle ESI
 #_internal:
